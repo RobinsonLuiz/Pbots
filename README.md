@@ -8,4 +8,7 @@
         - express
         - requestretry
 
+# para testes utilizou-se Jasmine JS.
+    - para utilizar digite NPM TEST.
+
 # as rotas estão especificadas em routes.js, todas estão comentadas.
