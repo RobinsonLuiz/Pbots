@@ -8,4 +8,4 @@
         - express
         - requestretry
 
-# as rotas estão especificadas em routes.js, totas estão comentadas.
+# as rotas estão especificadas em routes.js, todas estão comentadas.
