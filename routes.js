@@ -22,9 +22,9 @@ function createRoutes(express, functions) {
 
     /**
      * Listagem dos clientes mais fiéis
-     * @param {number} quantidade -> mostrar a quantidade de clientes mais fieis
+     * @param {number} numclientes -> mostrar a quantidade de clientes mais fieis
      */
-    express.route('/clientes/fiel/:quantidade')
+    express.route('/clientes/fiel/:numclientes')
     .get(functions.clienteFiel);
 
     /**

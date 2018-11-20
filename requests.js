@@ -16,7 +16,7 @@ exports.totalComprasCliente = async function(req, res) {
         clientes.sort((a, b) => {return b.total - a.total});
         res.status(200).json(clientes);
     } catch (err) {
-        res.status(500).json("Tivemos problemas internos, desculpe!");
+        res.status(500).json({ data: "Tivemos problemas internos, desculpe!"});
     };
 }
 
@@ -56,7 +56,7 @@ exports.clienteFiel = async function(req, res) {
         });
     });
     clientes.sort((a, b) => {return b.quantidade - a.quantidade});
-    res.status(200).json(clientes.splice(0, req.params.quantidade));
+    res.status(200).json(clientes.splice(0, req.params.numclientes));
 }
 
 exports.recomendarVinhoCliente = async function(req, res) {
@@ -87,7 +87,7 @@ exports.recomendarVinhoCliente = async function(req, res) {
             };
         });
         maisVendidos.sort((a, b) => {return b.quantidade - a.quantidade});
-        res.status(200).json(maisVendidos[0].produto);
+        res.status(200).json({ data: maisVendidos[0].produto });
     } else res.status(404).json("Cliente não encontrado");
 }
 

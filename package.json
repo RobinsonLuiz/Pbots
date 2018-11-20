@@ -4,7 +4,7 @@
   "description": "Prova Tecnica 1.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine" 
   },
   "author": "Robinson Luiz",
   "license": "ISC",
@@ -12,5 +12,8 @@
     "express": "^4.16.4",
     "request": "^2.88.0",
     "requestretry": "^3.0.2"
+  },
+  "devDependencies": {
+    "jasmine": "^3.3.0"
   }
 }
