@@ -87,7 +87,7 @@ exports.recomendarVinhoCliente = async function(req, res) {
             };
         });
         maisVendidos.sort((a, b) => {return b.quantidade - a.quantidade});
-        res.status(200).json(maisVendidos[0]);
+        res.status(200).json(maisVendidos[0].produto);
     } else res.status(404).json("Cliente não encontrado");
 }
 
