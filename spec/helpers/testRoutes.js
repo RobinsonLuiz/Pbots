@@ -4,7 +4,7 @@ const request = require('requestretry');
 describe("Routes", function() {
   it("rota total compras", async function() {
     let myHTTPrequest = request({
-      uri: `${uri}/clientes/vendas/total`,
+      uri: `${uri}/clientes/compras/total`,
       method: 'GET',
       json: true
     });
@@ -14,7 +14,7 @@ describe("Routes", function() {
 
   it("rota total compras POST", async function() {
     let myHTTPrequest = request({
-      uri: `${uri}/clientes/vendas/total`,
+      uri: `${uri}/clientes/compras/total`,
       method: 'POST',
       json: true
     });
@@ -24,22 +24,22 @@ describe("Routes", function() {
 
   it("rota compra unica no ano de 2016 ", async function() {
     let myHTTPrequest = request({
-      uri: `${uri}/clientes/vendas/ano/2016`,
+      uri: `${uri}/clientes/compras/ano/2016`,
       method: 'GET',
       json: true 
     });
     const resp = await (myHTTPrequest);
-    expect(resp.body.data.nome).toEqual('Joel');
+    expect(resp.body.data._nome).toEqual('Joel');
   });
 
   it("rota compra unica no ano de 2015 ", async function() {
     let myHTTPrequest = request({
-      uri: `${uri}/clientes/vendas/ano/2015`,
+      uri: `${uri}/clientes/compras/ano/2015`,
       method: 'GET',
       json: true 
     });
     const resp = await (myHTTPrequest);
-    expect(resp.body.data.nome).toEqual('Gustavo');
+    expect(resp.body.data._nome).toEqual('Gustavo');
   });
   // /clientes/fiel/:quantidade
   it("rota clientes fieis, retorno total de 5 clientes ", async function() {

@@ -10,14 +10,14 @@ function createRoutes(express, functions) {
     /**
      * Total de compras por cliente
      */
-    express.route('/clientes/vendas/total')
+    express.route('/clientes/compras/total')
     .get(functions.totalComprasCliente)
 
     /**
      * Maior comprador no ano
      * @param {string} ano -> ano para ver maior comprador no mesmo.
      */
-    express.route('/clientes/vendas/ano/:ano')
+    express.route('/clientes/compras/ano/:ano')
     .get(functions.maiorCompradorAno);
 
     /**
