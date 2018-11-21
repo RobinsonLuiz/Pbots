@@ -14,7 +14,7 @@ exports.totalComprasCliente = async function(req, res) {
             });
         });
         clientes.sort((a, b) => {return b.total - a.total});
-        res.status(200).json(clientes);
+        res.status(200).json({ data: clientes } );
     } catch (err) {
         res.status(500).json({ data: "Tivemos problemas internos, desculpe!"});
     };
@@ -40,7 +40,7 @@ exports.maiorCompradorAno = async function(req, res) {
     } else return res.status(404).json("Data muito antiga, por favor utilize uma data atual");
     clientes.sort((a, b) => {return b.total - a.total});
     if (clientes[0].total == 0) return res.status(404).json("Não encontramos nenhuma compra para este ano");
-    res.status(200).json(clientes[0]);
+    res.status(200).json({ data: clientes[0] });
 }
 
 
@@ -56,7 +56,7 @@ exports.clienteFiel = async function(req, res) {
         });
     });
     clientes.sort((a, b) => {return b.quantidade - a.quantidade});
-    res.status(200).json(clientes.splice(0, req.params.numclientes));
+    res.status(200).json({data: clientes.splice(0, req.params.numclientes) });
 }
 
 exports.recomendarVinhoCliente = async function(req, res) {
@@ -88,7 +88,7 @@ exports.recomendarVinhoCliente = async function(req, res) {
         });
         maisVendidos.sort((a, b) => {return b.quantidade - a.quantidade});
         res.status(200).json({ data: maisVendidos[0].produto });
-    } else res.status(404).json("Cliente não encontrado");
+    } else res.status(404).json({ data: "Cliente não encontrado" });
 }
 
 
