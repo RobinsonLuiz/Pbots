@@ -9,7 +9,7 @@ describe("Routes", function() {
       json: true
     });
     const resp = await (myHTTPrequest);
-    expect(resp.body.length).toEqual(10);
+    expect(resp.body.data.length).toEqual(10);
   });
 
   it("rota total compras POST", async function() {
@@ -29,7 +29,7 @@ describe("Routes", function() {
       json: true 
     });
     const resp = await (myHTTPrequest);
-    expect(resp.body.nome).toEqual('Joel');
+    expect(resp.body.data.nome).toEqual('Joel');
   });
 
   it("rota compra unica no ano de 2015 ", async function() {
@@ -39,7 +39,7 @@ describe("Routes", function() {
       json: true 
     });
     const resp = await (myHTTPrequest);
-    expect(resp.body.nome).toEqual('Gustavo');
+    expect(resp.body.data.nome).toEqual('Gustavo');
   });
   // /clientes/fiel/:quantidade
   it("rota clientes fieis, retorno total de 5 clientes ", async function() {
@@ -49,7 +49,7 @@ describe("Routes", function() {
       json: true 
     });
     const resp = await (myHTTPrequest);
-    expect(resp.body.length).toEqual(5);
+    expect(resp.body.data.length).toEqual(5);
   });
   // /clientes/recomendacoes/:id
 
