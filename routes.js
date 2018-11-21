@@ -10,7 +10,7 @@ function createRoutes(express, functions) {
     /**
      * Total de compras por cliente
      */
-    express.route('/total')
+    express.route('/clientes/vendas/total')
     .get(functions.totalComprasCliente)
 
     /**

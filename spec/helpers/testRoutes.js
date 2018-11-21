@@ -4,7 +4,7 @@ const request = require('requestretry');
 describe("Routes", function() {
   it("rota total compras", async function() {
     let myHTTPrequest = request({
-      uri: `${uri}/total`,
+      uri: `${uri}/clientes/vendas/total`,
       method: 'GET',
       json: true
     });
@@ -14,7 +14,7 @@ describe("Routes", function() {
 
   it("rota total compras POST", async function() {
     let myHTTPrequest = request({
-      uri: `${uri}/total`,
+      uri: `${uri}/clientes/vendas/total`,
       method: 'POST',
       json: true
     });
