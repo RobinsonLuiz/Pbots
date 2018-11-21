@@ -17,7 +17,7 @@ function createRoutes(express, functions) {
      * Maior comprador no ano
      * @param {string} ano -> ano para ver maior comprador no mesmo.
      */
-    express.route('/clientes/vendas/:ano')
+    express.route('/clientes/vendas/ano/:ano')
     .get(functions.maiorCompradorAno);
 
     /**

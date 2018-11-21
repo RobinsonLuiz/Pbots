@@ -24,7 +24,7 @@ describe("Routes", function() {
 
   it("rota compra unica no ano de 2016 ", async function() {
     let myHTTPrequest = request({
-      uri: `${uri}/clientes/vendas/2016`,
+      uri: `${uri}/clientes/vendas/ano/2016`,
       method: 'GET',
       json: true 
     });
@@ -34,7 +34,7 @@ describe("Routes", function() {
 
   it("rota compra unica no ano de 2015 ", async function() {
     let myHTTPrequest = request({
-      uri: `${uri}/clientes/vendas/2015`,
+      uri: `${uri}/clientes/vendas/ano/2015`,
       method: 'GET',
       json: true 
     });
